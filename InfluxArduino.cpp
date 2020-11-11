@@ -1,4 +1,8 @@
+#ifdef ESP8266
+#include <ESP8266HTTPClient.h>
+#else
 #include <HTTPClient.h>
+#endif
 #include "InfluxArduino.hpp"
 
 InfluxArduino::InfluxArduino(bool debug)
