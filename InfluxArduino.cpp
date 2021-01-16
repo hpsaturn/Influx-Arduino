@@ -71,7 +71,7 @@ bool InfluxArduino::write(const char *measurement,const char *tagString,const ch
         http.setAuthorization(_username,_password);
     }
 
-    char writeBuf[1024]; // ¯\_(ツ)_/¯ 
+    char writeBuf[2048]; // ¯\_(ツ)_/¯ 
     if(strlen(tagString) > 0)
     {
         sprintf(writeBuf,"%s,%s %s",measurement,tagString,fieldString); //no comma between tags and fields
